@@ -54,3 +54,10 @@ outlineSize.addEventListener('input', () => {
 outlineColor.addEventListener('input', () => {
     clock.style.webkitTextStrokeColor = outlineColor.value
 })
+
+var Y = 0
+
+clock.addEventListener("wheel", event => {
+    Y += event.deltaY / 8
+    clock.style.backgroundPositionY = -Y + 'px'
+})
